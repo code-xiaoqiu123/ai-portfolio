@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小东 · AI 建站工作室 | 3天交付你的专属网站</title>
+<title>小冬科技工作室 | 3天交付你的专属网站</title>
 <style>
   :root {
     --primary: #4f6ef7;
@@ -128,6 +128,25 @@
   }
   .note { font-size: 12.5px; color: var(--text-light); }
 
+  /* 联系方式 + 二维码布局 */
+  .contact-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 36px; flex-wrap: wrap;
+  }
+  .contact-left { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .qr-box { position: relative; width: 132px; height: 132px; }
+  .qr-box img {
+    width: 132px; height: 132px; border-radius: 12px;
+    border: 1.5px solid #e5e7eb; display: block; object-fit: cover;
+  }
+  .qr-placeholder {
+    position: absolute; inset: 0; border: 2px dashed #c7cffe;
+    border-radius: 12px; background: #f5f7ff;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 6px; font-size: 14px; font-weight: 600; color: var(--primary);
+  }
+  .qr-placeholder small { font-size: 10.5px; font-weight: 400; color: var(--text-light); }
+
   footer { text-align: center; padding: 32px 0; color: var(--text-light); font-size: 13px; }
 
   @media (max-width: 768px) {
@@ -143,7 +162,7 @@
 
 <nav>
   <div class="container nav-inner">
-    <div class="logo">小东<span> · AI 建站工作室</span></div>
+    <div class="logo">小冬<span> · 科技工作室</span></div>
     <div class="nav-links">
       <a href="#services">服务</a>
       <a href="#cases">案例</a>
@@ -298,13 +317,25 @@
     <div class="cta">
       <h2>有想法？先聊聊，不收咨询费 🙂</h2>
       <p>把你的需求告诉我，我免费帮你评估方案和报价。不确定做不做、怎么做，都可以先问。</p>
-      <div class="contact-box">微信号：Gucci_11124</div>
-      <p class="note">添加时请备注「建站咨询」· 工作时间秒回，晚上 12 点前在线</p>
+      <div class="contact-row">
+        <div class="contact-left">
+          <div class="contact-box">微信号：Gucci_11124</div>
+          <p class="note">添加时请备注「建站咨询」· 工作时间秒回，晚上 12 点前在线</p>
+        </div>
+        <div class="qr-box">
+          <!-- 二维码放置位：把你的微信二维码图片命名为 qrcode.png，放到 images 文件夹即可自动显示 -->
+          <img src="images/qrcode.png" alt="微信二维码" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="qr-placeholder">
+            <span>微信二维码<br>放置位</span>
+            <small>将 qrcode.png 放入 images 文件夹</small>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 小东 AI 建站工作室 · 学生创业 · 用心做站</footer>
+<footer>© 2026 小冬科技工作室 · 学生创业 · 用心做站</footer>
 
 </body>
 </html>
